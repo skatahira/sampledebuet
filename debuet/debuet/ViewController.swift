@@ -10,11 +10,36 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //80%まで縮小
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.5,
+                       options: UIView.AnimationOptions.curveEaseOut,
+                       animations: { () in
+                        self.imageView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }, completion: { (Bool) in
+            
+        })
+        
+        //8倍にする
+        UIView.animate(withDuration: 0.6,
+                       delay: 1.0,
+                       options: UIView.AnimationOptions.curveEaseOut,
+                       animations: { () in
+                        self.imageView.transform = CGAffineTransform(scaleX: 8.0, y: 8.0)
+                        self.imageView.alpha = 0
+        }, completion: { (Bool) in
+            //アニメーションが終わったらimageViewを消す
+            self.imageView.removeFromSuperview()
+        })
+    }
 
 }
 
