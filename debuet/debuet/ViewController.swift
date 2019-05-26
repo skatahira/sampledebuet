@@ -38,6 +38,9 @@ class ViewController: UIViewController {
         }, completion: { (Bool) in
             //アニメーションが終わったらimageViewを消す
             self.imageView.removeFromSuperview()
+            // アニメーションが終わり次第メイン画面に遷移する
+            self.performSegue(withIdentifier: "toMain", sender: nil)
+            
         })
     }
 

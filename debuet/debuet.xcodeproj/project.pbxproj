@@ -12,6 +12,8 @@
 		ED209C0D2298049100B33289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED209C0B2298049100B33289 /* Main.storyboard */; };
 		ED209C0F2298049700B33289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED209C0E2298049700B33289 /* Assets.xcassets */; };
 		ED209C122298049700B33289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED209C102298049700B33289 /* LaunchScreen.storyboard */; };
+		ED209C1E2299867300B33289 /* bmiRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED209C1D2299867300B33289 /* bmiRecordViewController.swift */; };
+		ED209C202299938100B33289 /* bmiResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED209C1F2299938100B33289 /* bmiResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		ED209C0E2298049700B33289 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED209C112298049700B33289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED209C132298049700B33289 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED209C1C229879D100B33289 /* debuet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = debuet.entitlements; sourceTree = "<group>"; };
+		ED209C1D2299867300B33289 /* bmiRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmiRecordViewController.swift; sourceTree = "<group>"; };
+		ED209C1F2299938100B33289 /* bmiResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bmiResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 			children = (
 				ED209C062298049100B33289 /* debuet */,
 				ED209C052298049100B33289 /* Products */,
+				ED209C19229879D100B33289 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +60,24 @@
 		ED209C062298049100B33289 /* debuet */ = {
 			isa = PBXGroup;
 			children = (
+				ED209C1C229879D100B33289 /* debuet.entitlements */,
 				ED209C072298049100B33289 /* AppDelegate.swift */,
 				ED209C092298049100B33289 /* ViewController.swift */,
 				ED209C0B2298049100B33289 /* Main.storyboard */,
+				ED209C1F2299938100B33289 /* bmiResultViewController.swift */,
+				ED209C1D2299867300B33289 /* bmiRecordViewController.swift */,
 				ED209C0E2298049700B33289 /* Assets.xcassets */,
 				ED209C102298049700B33289 /* LaunchScreen.storyboard */,
 				ED209C132298049700B33289 /* Info.plist */,
 			);
 			path = debuet;
+			sourceTree = "<group>";
+		};
+		ED209C19229879D100B33289 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +112,11 @@
 				TargetAttributes = {
 					ED209C032298049100B33289 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED209C1E2299867300B33289 /* bmiRecordViewController.swift in Sources */,
 				ED209C0A2298049100B33289 /* ViewController.swift in Sources */,
+				ED209C202299938100B33289 /* bmiResultViewController.swift in Sources */,
 				ED209C082298049100B33289 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
