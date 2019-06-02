@@ -22,6 +22,7 @@ class bmiRecordViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func didClickButton(_ sender: UIButton) {
+        
         let height: Float? = Float(heightInput.text!)
         let weight: Float? = Float(weightInput.text!)
         let heightM = height! / 100.0
